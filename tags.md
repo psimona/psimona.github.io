@@ -3,6 +3,23 @@ layout: page
 title: Tags
 ---
 
-{% for tags in site.tags %}
-{{ tags.first }} ({{ tags | last | size }})
+{% for tag in site.tags %}
+<a href="{{ '/tags/#' }}{{ tag | first }}" >
+	{{ tag.first }} ({{ tag | last | size }}) 
+</a>
+{% endfor %}
+
+<hr>
+
+{% for tag in site.tags %}
+<a class="anchor" id="{{ tag.first }}"></a> <h4>{{ tag.first }}</h4>
+
+{% for post in site.tags[tag.first] %}
+<ul>
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> Posted on {{ post.date | date_to_string }}
+    </li>
+</ul>
+{% endfor %}
+
 {% endfor %}
