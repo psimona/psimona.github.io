@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Boost Unit Test framework"
-categories:
-- blog
+tags:
 - Boost
 - Cpp
 ---

@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "How to build Boost"
-categories:
-- blog
+tags:
 - Boost
 - Cpp
 ---
